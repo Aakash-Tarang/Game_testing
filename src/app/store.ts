@@ -1,5 +1,5 @@
 import { create } from 'zustand'
-import { SessionRecord, Rating, Profile } from '../core/types'
+import type { SessionRecord, Rating, Profile } from '../core/types'
 
 type AppState = {
   profile: Profile

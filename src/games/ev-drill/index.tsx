@@ -1,5 +1,6 @@
 import { useEffect, useState, useRef } from 'react'
-import { initEV, applyEV, resultEV, EVSettings, EVState } from './engine'
+import { initEV, applyEV, resultEV } from './engine'
+import type { EVSettings, EVState } from './engine'
 import { navigate } from '../../app/router'
 import { useAppStore } from '../../app/store'
 
@@ -17,7 +18,7 @@ function formatNum(n: number) {
   return n.toFixed(1)
 }
 
-export function EVDrillPage({ params }: { params: Record<string,string> }) {
+export function EVDrillPage(_props: { params: Record<string,string> }) {
   const [settings, setSettings] = useState<EVSettings>(defaultSettings)
   const [state, setState] = useState<EVState | null>(null)
   const [input, setInput] = useState('')

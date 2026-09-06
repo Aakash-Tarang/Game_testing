@@ -1,4 +1,4 @@
-export function toleranceScore(answer: number, truth: number, tolerancePct = 0.01): { accuracy: number, ratio: number } {
+export function toleranceScore(answer: number, truth: number, _tolerancePct = 0.01): { accuracy: number, ratio: number } {
   if (truth === 0) {
     const err = Math.abs(answer)
     if (err < 0.01) return { accuracy: 1, ratio: err }
