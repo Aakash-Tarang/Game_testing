@@ -1,0 +1,13 @@
+{
+  "name": "quant-sim-book",
+  "private": true,
+  "type": "module",
+  "description": "Build tooling for the QUANT_SIM book (REPORT.md + book.html).",
+  "scripts": {
+    "build": "node build.mjs"
+  },
+  "dependencies": {
+    "katex": "^0.16.11",
+    "marked": "^15.0.0"
+  }
+}

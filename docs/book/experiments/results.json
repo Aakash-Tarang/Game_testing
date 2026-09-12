@@ -1,0 +1,1534 @@
+{
+  "prng": {
+    "mean": 0.5007214539018017,
+    "meanTheory": 0.5,
+    "std": 0.28861652615003236,
+    "stdTheory": 0.28867513459481287,
+    "chi2_20bins": 20.073199999999996,
+    "chi2_crit_19dof_0p01": 36.19,
+    "ac1": 0.00010240249316626381,
+    "seq42": [
+      0.8153545630630106,
+      0.8153545630630106,
+      0.8153545630630106
+    ],
+    "seq1": [
+      0.046833539847284555,
+      0.3187930276617408,
+      0.24807123886421323,
+      0.6628968755248934,
+      0.259057576302439,
+      0.5786652830429375,
+      0.5822249813936651,
+      0.6348104800563306
+    ],
+    "seq2identical": true,
+    "seq3": [
+      0.5800979523919523,
+      0.4109691926278174,
+      0.6031185651663691,
+      0.2515298342332244,
+      0.4747876988258213,
+      0.49206977244466543,
+      0.340231163892895,
+      0.813935584621504
+    ],
+    "firstDiverge": 0,
+    "dieFaces": [
+      33462,
+      33505,
+      33384,
+      33518,
+      33093,
+      33038
+    ],
+    "chi2die": 6.830259999999999,
+    "chi2die_crit_5dof_0p01": 15.09,
+    "permCount": {
+      "123": 10019,
+      "132": 9942,
+      "213": 10030,
+      "231": 10124,
+      "312": 9812,
+      "321": 10073
+    },
+    "chi2perm": 6.0674,
+    "chi2perm_crit_5dof_0p01": 15.09
+  },
+  "distributions": [
+    {
+      "name": "uniformDiscrete{1..20}",
+      "engineMean": 10.5,
+      "empiricalMean": 10.49032,
+      "theoMean": 10.5,
+      "empiricalVar": 33.29505277285543,
+      "theoVar": 33.25,
+      "closedFormMean": "(1+20)/2 = 10.5"
+    },
+    {
+      "name": "binomial(n=10,p=0.3)",
+      "engineMean": 3,
+      "empiricalMean": 2.99896,
+      "theoMean": 3,
+      "empiricalVar": 2.107299454900786,
+      "theoVar": 2.0999999999999996,
+      "pmfSum": 0.9999999999999992
+    },
+    {
+      "name": "geometric(p=0.2) trunc@50",
+      "engineMean": 5,
+      "empiricalMean": 5.000835,
+      "theoMean": 5,
+      "empiricalVar": 20.095084778197315,
+      "theoVar": 19.999999999999996,
+      "truncationMass": 0.000014272476927059638,
+      "pmfSum": 1.0000000000000009
+    },
+    {
+      "name": "normalDiscr(50,10;0..100,step5)",
+      "engineMean": 50.000000000000014,
+      "empiricalMean": 49.99395,
+      "theoMean": 50,
+      "empiricalVar": 100.2272145334668,
+      "theoVar": 100,
+      "gridMean": 50.000000000000014,
+      "gridSum": 1.0000000000000002
+    },
+    {
+      "name": "triangular(2,12,7)",
+      "engineMean": 7,
+      "empiricalMean": 6.997569387745492,
+      "theoMean": 7,
+      "empiricalVar": 4.1782064996327515,
+      "theoVar": 4.166666666666667
+    },
+    {
+      "name": "customTable{10@1,20@2,50@1}",
+      "engineMean": 25,
+      "empiricalMean": 24.9831,
+      "theoMean": 25,
+      "empiricalVar": 224.852838654565,
+      "theoVar": 225
+    },
+    {
+      "name": "uniformContinuous(0,10)",
+      "engineMean": 5,
+      "empiricalMean": 4.995618372380128,
+      "theoMean": 5,
+      "empiricalVar": 8.345095524958635,
+      "theoVar": 8.333333333333334,
+      "midRuleEV": 5.000000000000001,
+      "midRuleEVsq": 33.333325,
+      "exactEVsq": 33.333333333333336
+    }
+  ],
+  "conditionalCheck": {
+    "engine": 17,
+    "closedForm": 17,
+    "formula": "(k+1+max)/2"
+  },
+  "evdrillMix": {
+    "easy": {
+      "counts": {
+        "sequence": 99,
+        "lottery": 201
+      },
+      "truthMean": 106.3332516617875,
+      "truthMin": -16.525824890371222,
+      "truthMax": 1493,
+      "negFrac": 0.32666666666666666,
+      "samples": {
+        "sequence": {
+          "prompt": "30 data points shown. What is the MEAN / EV of a random draw?",
+          "visual": "16, 15, 16, 15, 19, 19, 16, 18, 15, 17, 17, 19, 13, 19, 13, 19, 15, 22, 15, 16, 14, 13, 14, 18, 15, 14, 15, 22, 13, 20",
+          "truth": 16.4,
+          "meta": {
+            "vals": [
+              16,
+              15,
+              16,
+              15,
+              19,
+              19,
+              16,
+              18,
+              15,
+              17,
+              17,
+              19,
+              13,
+              19,
+              13,
+              19,
+              15,
+              22,
+              15,
+              16,
+              14,
+              13,
+              14,
+              18,
+              15,
+              14,
+              15,
+              22,
+              13,
+              20
+            ],
+            "variant": "EV of random draw",
+            "sum": 492,
+            "mean": 16.4
+          },
+          "tier": 2
+        },
+        "lottery": {
+          "prompt": "Lottery EV: outcomes with probabilities. What is E[X]?",
+          "visual": "12 @ 28.6% | -3 @ 29.4% | -4 @ 42.0%",
+          "truth": 0.8715529864884719,
+          "meta": {
+            "outcomes": [
+              12,
+              -3,
+              -4
+            ],
+            "probs": [
+              0.2861132685034593,
+              0.2937406904331233,
+              0.4201460410634174
+            ]
+          },
+          "tier": 1
+        }
+      }
+    },
+    "medium": {
+      "counts": {
+        "conditional": 93,
+        "sequence": 104,
+        "lottery": 103
+      },
+      "truthMean": 121.8204181245244,
+      "truthMin": -64.30038769859422,
+      "truthMax": 1478.1000000000001,
+      "negFrac": 0.19666666666666666,
+      "samples": {
+        "conditional": {
+          "prompt": "X ~ Uniform{1..50}. What is E[X | X > 30] ?",
+          "visual": "P(X=k)=1/50 for k in [1,50]",
+          "truth": 40.5,
+          "meta": {
+            "min": 1,
+            "max": 50,
+            "k": 30,
+            "filtered": [
+              31,
+              32,
+              33,
+              34,
+              35,
+              36,
+              37,
+              38,
+              39,
+              40,
+              41,
+              42,
+              43,
+              44,
+              45,
+              46,
+              47,
+              48,
+              49,
+              50
+            ]
+          },
+          "tier": 3
+        },
+        "sequence": {
+          "prompt": "30 data points shown. What is the MEAN / EV of a random draw?",
+          "visual": "28.1, 27.3, 14.4, 32.1, 24.4, 29, 14.5, 25.9, 31.6, 14, 23.3, 19.4, 16.8, 19.8, 22.3, 18.2, 29.7, 16.3, 25.8, 20.9, 20.3, 24.9, 13.3, 15.6, 30.7, 17.6, 19.7, 30.2, 25.5, 22.9",
+          "truth": 22.483333333333338,
+          "meta": {
+            "vals": [
+              28.1,
+              27.3,
+              14.4,
+              32.1,
+              24.4,
+              29,
+              14.5,
+              25.9,
+              31.6,
+              14,
+              23.3,
+              19.4,
+              16.8,
+              19.8,
+              22.3,
+              18.2,
+              29.7,
+              16.3,
+              25.8,
+              20.9,
+              20.3,
+              24.9,
+              13.3,
+              15.6,
+              30.7,
+              17.6,
+              19.7,
+              30.2,
+              25.5,
+              22.9
+            ],
+            "variant": "mean",
+            "sum": 674.5000000000001,
+            "mean": 22.483333333333338
+          },
+          "tier": 2
+        },
+        "lottery": {
+          "prompt": "Lottery EV: outcomes with probabilities. What is E[X]?",
+          "visual": "15 @ 30.6% | 86 @ 32.7% | 98 @ 15.2% | 63 @ 21.6%",
+          "truth": 61.13488815755139,
+          "meta": {
+            "outcomes": [
+              15,
+              86,
+              98,
+              63
+            ],
+            "probs": [
+              0.3059582573948351,
+              0.32656556624119537,
+              0.15171075682731397,
+              0.2157654195366555
+            ]
+          },
+          "tier": 1
+        }
+      }
+    },
+    "hard": {
+      "counts": {
+        "sequence": 84,
+        "withCost": 65,
+        "compound": 76,
+        "conditional": 75
+      },
+      "truthMean": 103.26078467366312,
+      "truthMin": -524.6432135035693,
+      "truthMax": 1487.7000000000005,
+      "negFrac": 0.14,
+      "samples": {
+        "sequence": {
+          "prompt": "30 data points shown. What is the MEAN / EV of a random draw?",
+          "visual": "12.3, 7, 13.5, 10.4, 25.4, 26.5, 12.5, 21, 8.2, 16.7, 17.7, 24.4, 2.9, 25.5, 0.1, 24.3, 10.7, 36.8, 9, 14.5, 4.3, 1.4, 5.4, 20.6, 7.2, 5.1, 7.1, 36.5, 1.7, 29.7",
+          "truth": 14.613333333333333,
+          "meta": {
+            "vals": [
+              12.3,
+              7,
+              13.5,
+              10.4,
+              25.4,
+              26.5,
+              12.5,
+              21,
+              8.2,
+              16.7,
+              17.7,
+              24.4,
+              2.9,
+              25.5,
+              0.1,
+              24.3,
+              10.7,
+              36.8,
+              9,
+              14.5,
+              4.3,
+              1.4,
+              5.4,
+              20.6,
+              7.2,
+              5.1,
+              7.1,
+              36.5,
+              1.7,
+              29.7
+            ],
+            "variant": "EV of random draw",
+            "sum": 438.4,
+            "mean": 14.613333333333333
+          },
+          "tier": 2
+        },
+        "withCost": {
+          "prompt": "Lottery EV is -21.15 (from: -203.7 @ 14.9% | 378 @ 34.9% | -465.9 @ 17.6% | -125 @ 32.6%). Entry fee = 8. What is net EV? Is it worth paying? (enter net EV)",
+          "visual": "-203.7 @ 14.9% | 378 @ 34.9% | -465.9 @ 17.6% | -125 @ 32.6% | cost=8",
+          "truth": -29.154859988902636,
+          "meta": {
+            "base": {
+              "outcomes": [
+                -203.7,
+                378,
+                -465.9,
+                -125
+              ],
+              "probs": [
+                0.14870200338829795,
+                0.34907285370324054,
+                0.17610929227038308,
+                0.32611585063807846
+              ]
+            },
+            "cost": 8,
+            "gross": -21.154859988902636
+          },
+          "tier": 5
+        },
+        "compound": {
+          "prompt": "Compound lottery: with prob 74% you get lottery A with EV=73, else lottery B with EV=-3. What is overall EV?",
+          "visual": "P(A)=0.74, EV_A=73, EV_B=-3",
+          "truth": 53.0929379310459,
+          "meta": {
+            "p": 0.7380649727769197,
+            "evA": 73,
+            "evB": -3
+          },
+          "tier": 4
+        },
+        "conditional": {
+          "prompt": "X ~ Uniform{1..100}. What is E[X | X > 30] ?",
+          "visual": "P(X=k)=1/100 for k in [1,100]",
+          "truth": 65.5,
+          "meta": {
+            "min": 1,
+            "max": 100,
+            "k": 30,
+            "filtered": [
+              31,
+              32,
+              33,
+              34,
+              35,
+              36,
+              37,
+              38,
+              39,
+              40,
+              41,
+              42,
+              43,
+              44,
+              45,
+              46,
+              47,
+              48,
+              49,
+              50,
+              51,
+              52,
+              53,
+              54,
+              55,
+              56,
+              57,
+              58,
+              59,
+              60,
+              61,
+              62,
+              63,
+              64,
+              65,
+              66,
+              67,
+              68,
+              69,
+              70,
+              71,
+              72,
+              73,
+              74,
+              75,
+              76,
+              77,
+              78,
+              79,
+              80,
+              81,
+              82,
+              83,
+              84,
+              85,
+              86,
+              87,
+              88,
+              89,
+              90,
+              91,
+              92,
+              93,
+              94,
+              95,
+              96,
+              97,
+              98,
+              99,
+              100
+            ]
+          },
+          "tier": 3
+        }
+      }
+    },
+    "expert": {
+      "counts": {
+        "sequence": 55,
+        "conditional": 62,
+        "withCost": 46,
+        "callPayoff": 49,
+        "compound": 46,
+        "lottery": 42
+      },
+      "truthMean": 67.18727287361111,
+      "truthMin": -345.994103672815,
+      "truthMax": 1422.5000000000005,
+      "negFrac": 0.14333333333333334,
+      "samples": {
+        "sequence": {
+          "prompt": "30 data points shown. What is the SUM?",
+          "visual": "21.9, 46.6, 34.5, 44.4, 58.3, 48.1, 26.5, 39.8, 31.8, 49.3, 47.7, 21.9, 57.1, 41.7, 51, 22, 44.8, 56.2, 21, 39.6, 31.7, 26.6, 32.5, 37.6, 29.4, 52.3, 25.6, 44.7, 34.8, 33.6",
+          "truth": 1153,
+          "meta": {
+            "vals": [
+              21.9,
+              46.6,
+              34.5,
+              44.4,
+              58.3,
+              48.1,
+              26.5,
+              39.8,
+              31.8,
+              49.3,
+              47.7,
+              21.9,
+              57.1,
+              41.7,
+              51,
+              22,
+              44.8,
+              56.2,
+              21,
+              39.6,
+              31.7,
+              26.6,
+              32.5,
+              37.6,
+              29.4,
+              52.3,
+              25.6,
+              44.7,
+              34.8,
+              33.6
+            ],
+            "variant": "sum",
+            "sum": 1153,
+            "mean": 38.43333333333333
+          },
+          "tier": 2
+        },
+        "conditional": {
+          "prompt": "X ~ Uniform{1..100}. What is E[X | X > 66] ?",
+          "visual": "P(X=k)=1/100 for k in [1,100]",
+          "truth": 83.5,
+          "meta": {
+            "min": 1,
+            "max": 100,
+            "k": 66,
+            "filtered": [
+              67,
+              68,
+              69,
+              70,
+              71,
+              72,
+              73,
+              74,
+              75,
+              76,
+              77,
+              78,
+              79,
+              80,
+              81,
+              82,
+              83,
+              84,
+              85,
+              86,
+              87,
+              88,
+              89,
+              90,
+              91,
+              92,
+              93,
+              94,
+              95,
+              96,
+              97,
+              98,
+              99,
+              100
+            ]
+          },
+          "tier": 3
+        },
+        "withCost": {
+          "prompt": "Lottery EV is 160.45 (from: -265.2 @ 22.1% | 189 @ 19.2% | -327 @ 9.6% | 435 @ 13.9% | 455 @ 24.4% | 394 @ 10.8%). Entry fee = 41. What is net EV? Is it worth paying? (enter net EV)",
+          "visual": "-265.2 @ 22.1% | 189 @ 19.2% | -327 @ 9.6% | 435 @ 13.9% | 455 @ 24.4% | 394 @ 10.8% | cost=41",
+          "truth": 119.45245983889973,
+          "meta": {
+            "base": {
+              "outcomes": [
+                -265.2,
+                189,
+                -327,
+                435,
+                455,
+                394
+              ],
+              "probs": [
+                0.22115820615292225,
+                0.1920209380779413,
+                0.09570852385698354,
+                0.1391076547320942,
+                0.24437169668448036,
+                0.10763298049557835
+              ]
+            },
+            "cost": 41,
+            "gross": 160.45245983889973
+          },
+          "tier": 5
+        },
+        "callPayoff": {
+          "prompt": "X ~ Uniform{0..100}. Payoff = max(0, X - 56). What is E[payoff]? (call option EV)",
+          "visual": "Call K=56, underlying uniform 0..100",
+          "truth": 9.801980198019802,
+          "meta": {
+            "min": 0,
+            "max": 100,
+            "K": 56,
+            "vals": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              31,
+              32,
+              33,
+              34,
+              35,
+              36,
+              37,
+              38,
+              39,
+              40,
+              41,
+              42,
+              43,
+              44,
+              45,
+              46,
+              47,
+              48,
+              49,
+              50,
+              51,
+              52,
+              53,
+              54,
+              55,
+              56,
+              57,
+              58,
+              59,
+              60,
+              61,
+              62,
+              63,
+              64,
+              65,
+              66,
+              67,
+              68,
+              69,
+              70,
+              71,
+              72,
+              73,
+              74,
+              75,
+              76,
+              77,
+              78,
+              79,
+              80,
+              81,
+              82,
+              83,
+              84,
+              85,
+              86,
+              87,
+              88,
+              89,
+              90,
+              91,
+              92,
+              93,
+              94,
+              95,
+              96,
+              97,
+              98,
+              99,
+              100
+            ]
+          },
+          "tier": 6
+        },
+        "compound": {
+          "prompt": "Compound lottery: with prob 39% you get lottery A with EV=44, else lottery B with EV=66. What is overall EV?",
+          "visual": "P(A)=0.39, EV_A=44, EV_B=66",
+          "truth": 57.40048116985709,
+          "meta": {
+            "p": 0.3908872195519507,
+            "evA": 44,
+            "evB": 66
+          },
+          "tier": 4
+        },
+        "lottery": {
+          "prompt": "Lottery EV: outcomes with probabilities. What is E[X]?",
+          "visual": "-144 @ 27.7% | -453.8 @ 26.7% | 104 @ 10.5% | -61.8 @ 35.2%",
+          "truth": -171.7058032439248,
+          "meta": {
+            "outcomes": [
+              -144,
+              -453.8,
+              104,
+              -61.8
+            ],
+            "probs": [
+              0.27659492694115906,
+              0.26659112347203384,
+              0.1045477693104688,
+              0.3522661802763383
+            ]
+          },
+          "tier": 1
+        }
+      }
+    }
+  },
+  "evdrillCrossCheck": {
+    "checked": 1000,
+    "agree": 1000,
+    "maxAbsErr": 0,
+    "mismatches": []
+  },
+  "closedForms": {
+    "conditional": [
+      {
+        "max": 20,
+        "k": 7,
+        "brute": 14,
+        "closedForm": 14
+      },
+      {
+        "max": 50,
+        "k": 25,
+        "brute": 38,
+        "closedForm": 38
+      },
+      {
+        "max": 100,
+        "k": 60,
+        "brute": 80.5,
+        "closedForm": 80.5
+      }
+    ],
+    "callPayoff": [
+      {
+        "max": 20,
+        "K": 8,
+        "brute": 3.7142857142857144,
+        "closedForm": 3.7142857142857144
+      },
+      {
+        "max": 50,
+        "K": 30,
+        "brute": 4.117647058823529,
+        "closedForm": 4.117647058823529
+      },
+      {
+        "max": 100,
+        "K": 55,
+        "brute": 10.247524752475247,
+        "closedForm": 10.247524752475247
+      }
+    ]
+  },
+  "tolerance": [
+    {
+      "ans": 100.4,
+      "truth": 100,
+      "accuracy": 1,
+      "ratio": 0.0040000000000000565
+    },
+    {
+      "ans": 101,
+      "truth": 100,
+      "accuracy": 1,
+      "ratio": 0.01
+    },
+    {
+      "ans": 104,
+      "truth": 100,
+      "accuracy": 0.5,
+      "ratio": 0.04
+    },
+    {
+      "ans": 107,
+      "truth": 100,
+      "accuracy": 0.25,
+      "ratio": 0.07
+    },
+    {
+      "ans": 111,
+      "truth": 100,
+      "accuracy": 0,
+      "ratio": 0.11
+    },
+    {
+      "ans": 0.005,
+      "truth": 0,
+      "accuracy": 1,
+      "ratio": 0.005
+    },
+    {
+      "ans": 0.05,
+      "truth": 0,
+      "accuracy": 0.5,
+      "ratio": 0.05
+    },
+    {
+      "ans": 0.5,
+      "truth": 0,
+      "accuracy": 0,
+      "ratio": 0.5
+    }
+  ],
+  "timeBonus": [
+    {
+      "remainingFrac": 1,
+      "bonus": 1.5
+    },
+    {
+      "remainingFrac": 0.75,
+      "bonus": 1.375
+    },
+    {
+      "remainingFrac": 0.5,
+      "bonus": 1.25
+    },
+    {
+      "remainingFrac": 0.25,
+      "bonus": 1.125
+    },
+    {
+      "remainingFrac": 0,
+      "bonus": 1
+    }
+  ],
+  "scoreExamples": [
+    {
+      "desc": "instant & exact",
+      "base": 10,
+      "acc": 1,
+      "frac": 0.9,
+      "score": 14.5
+    },
+    {
+      "desc": "half credit, slow",
+      "base": 10,
+      "acc": 0.5,
+      "frac": 0.05,
+      "score": 5.125
+    },
+    {
+      "desc": "quarter credit",
+      "base": 10,
+      "acc": 0.25,
+      "frac": 0.5,
+      "score": 3.125
+    }
+  ],
+  "dp": [
+    {
+      "h": 5,
+      "Kcall": 473,
+      "Kbin": 473,
+      "kernelT": {
+        "Eq": 449.9999999999999,
+        "sd": 58.01099909928248,
+        "call": 13.708544042499291,
+        "binary": 0.37778514259470014,
+        "support": 104
+      },
+      "kernelE": {
+        "Eq": 450.0000000000002,
+        "sd": 55.20906365009284,
+        "call": 12.661158671236933,
+        "binary": 0.3758095129630883,
+        "support": 104
+      },
+      "mc200": {
+        "q": {
+          "mean": 449.33066666666656,
+          "sd": 4.167393076909259
+        },
+        "call": {
+          "mean": 12.359333333333336,
+          "sd": 1.997569960508627
+        },
+        "binary": {
+          "mean": 0.3686666666666667,
+          "sd": 0.032824857415803294
+        }
+      },
+      "mcSE_Q": 3.903870328994037,
+      "seFormulaCheck": {
+        "observedSD": 4.167393076909259,
+        "predicted": 3.903870328994037
+      },
+      "biasQ_TminusE": 3.410605131648481e-13,
+      "relBiasQ_pct": 7.579122514774404e-14
+    },
+    {
+      "h": 10,
+      "Kcall": 473,
+      "Kbin": 473,
+      "kernelT": {
+        "Eq": 450,
+        "sd": 69.82899011436076,
+        "call": 18.148377406667027,
+        "binary": 0.38406289161293017,
+        "support": 439
+      },
+      "kernelE": {
+        "Eq": 450.00000000000034,
+        "sd": 63.72266086890847,
+        "call": 15.824593325707832,
+        "binary": 0.38143780997781523,
+        "support": 439
+      },
+      "mc200": {
+        "q": {
+          "mean": 450.7826666666666,
+          "sd": 4.2701739715293145
+        },
+        "call": {
+          "mean": 16.13516666666667,
+          "sd": 2.0700772446579316
+        },
+        "binary": {
+          "mean": 0.3878333333333333,
+          "sd": 0.03125764274357645
+        }
+      },
+      "mcSE_Q": 4.5058725615655835,
+      "seFormulaCheck": {
+        "observedSD": 4.2701739715293145,
+        "predicted": 4.5058725615655835
+      },
+      "biasQ_TminusE": 3.410605131648481e-13,
+      "relBiasQ_pct": 7.579122514774402e-14
+    }
+  ],
+  "halflife": {
+    "phiT": 0.925,
+    "phiE": 0.95,
+    "hlT": 8.890886038076019,
+    "hlE": 13.513407333964874
+  },
+  "decay": [
+    {
+      "t": 0,
+      "factor": 1
+    },
+    {
+      "t": 1,
+      "factor": 0.75
+    },
+    {
+      "t": 2,
+      "factor": 0.5625
+    },
+    {
+      "t": 3,
+      "factor": 0.421875
+    },
+    {
+      "t": 4,
+      "factor": 0.31640625
+    },
+    {
+      "t": 5,
+      "factor": 0.2373046875
+    },
+    {
+      "t": 6,
+      "factor": 0.177978515625
+    },
+    {
+      "t": 7,
+      "factor": 0.13348388671875
+    },
+    {
+      "t": 8,
+      "factor": 0.1001129150390625
+    }
+  ],
+  "policies": {
+    "none": {
+      "sessions": 400,
+      "pnl": {
+        "mean": 0,
+        "median": 0,
+        "sd": 0,
+        "pctPositive": 0,
+        "min": 0,
+        "max": 0
+      },
+      "capturedInstant": {
+        "mean": 0,
+        "sd": 0
+      },
+      "edgeCapturedPct": {
+        "mean": 0,
+        "sd": 0
+      },
+      "detection": 0,
+      "precision": 0,
+      "f1": 0,
+      "falsePositives": {
+        "mean": 0,
+        "sd": 0
+      },
+      "trades": {
+        "mean": 0
+      },
+      "injected": {
+        "mean": 14.645
+      }
+    },
+    "random": {
+      "sessions": 400,
+      "pnl": {
+        "mean": 1.576023770229763,
+        "median": -38.80221352682503,
+        "sd": 1210.3488279263192,
+        "pctPositive": 0.47,
+        "min": -6637.278329773108,
+        "max": 4088.751305714773
+      },
+      "capturedInstant": {
+        "mean": -73.43658039643688,
+        "sd": 74.49847808879589
+      },
+      "edgeCapturedPct": {
+        "mean": -5.782175363509109,
+        "sd": 5.626376512322773
+      },
+      "detection": 0.2007787987610275,
+      "precision": 0.16020786563779177,
+      "f1": 0.1740847883013852,
+      "falsePositives": {
+        "mean": 12.0725,
+        "sd": 3.385394510241745
+      },
+      "trades": {
+        "mean": 17.94
+      },
+      "injected": {
+        "mean": 14.645
+      }
+    },
+    "arb1": {
+      "sessions": 400,
+      "pnl": {
+        "mean": 1389.2640183104988,
+        "median": 1299.1614896036153,
+        "sd": 2406.6343175384823,
+        "pctPositive": 0.7625,
+        "min": -7490.987075322384,
+        "max": 9881.486669006332
+      },
+      "capturedInstant": {
+        "mean": 1232.143809977165,
+        "sd": 331.19678062788563
+      },
+      "edgeCapturedPct": {
+        "mean": 91.68427624414704,
+        "sd": 0.9649571032088197
+      },
+      "detection": 1,
+      "precision": 1,
+      "f1": 1,
+      "falsePositives": {
+        "mean": 0,
+        "sd": 0
+      },
+      "trades": {
+        "mean": 14.645
+      },
+      "injected": {
+        "mean": 14.645
+      }
+    },
+    "arbGreedy": {
+      "sessions": 400,
+      "pnl": {
+        "mean": 3634.9844352446207,
+        "median": 4151.503177307619,
+        "sd": 15177.072759097913,
+        "pctPositive": 0.635,
+        "min": -64484.236761626045,
+        "max": 59887.410347252146
+      },
+      "capturedInstant": {
+        "mean": 3563.201726911288,
+        "sd": 963.4312110829566
+      },
+      "edgeCapturedPct": {
+        "mean": 265.76913723395063,
+        "sd": 18.26834866875217
+      },
+      "detection": 6.6672219474010435,
+      "precision": 0.9975031759051973,
+      "f1": 1.7333055591222,
+      "falsePositives": {
+        "mean": 0.24,
+        "sd": 0.5030234402626107
+      },
+      "trades": {
+        "mean": 96.915
+      },
+      "injected": {
+        "mean": 14.645
+      }
+    }
+  },
+  "injectedStats": {
+    "mean": 14.645,
+    "sd": 3.2696638595406053,
+    "theoryMean": 15,
+    "theorySd": 3.3541019662496847,
+    "hist": {
+      "7": 3,
+      "8": 8,
+      "9": 10,
+      "10": 21,
+      "11": 28,
+      "12": 33,
+      "13": 41,
+      "14": 55,
+      "15": 41,
+      "16": 52,
+      "17": 40,
+      "18": 16,
+      "19": 24,
+      "20": 12,
+      "21": 4,
+      "22": 7,
+      "23": 4,
+      "25": 1
+    }
+  },
+  "workedSession": [
+    {
+      "tick": 12,
+      "q": 378,
+      "injected": [
+        {
+          "id": "BIN_10_439",
+          "fair": 0.31,
+          "bid": 8.77,
+          "ask": 10.27,
+          "mis": 9.21
+        }
+      ],
+      "traded": {
+        "id": "BIN_10_439",
+        "side": "sell",
+        "qty": 10,
+        "price": 8.77,
+        "fairAtTrade": 0.31,
+        "instantPnl": -84.567
+      },
+      "pnlAfter": 84.567
+    },
+    {
+      "tick": 23,
+      "q": 325,
+      "injected": [
+        {
+          "id": "CALL_10_365",
+          "fair": 46.67,
+          "bid": 38.48,
+          "ask": 39.98,
+          "mis": -7.44
+        }
+      ],
+      "traded": {
+        "id": "CALL_10_365",
+        "side": "buy",
+        "qty": 10,
+        "price": 39.98,
+        "fairAtTrade": 46.67,
+        "instantPnl": 66.89
+      },
+      "pnlAfter": 152.541
+    },
+    {
+      "tick": 29,
+      "q": 405,
+      "injected": [
+        {
+          "id": "FWD_5",
+          "fair": 422.3,
+          "bid": 413.29,
+          "ask": 414.79,
+          "mis": -8.26
+        }
+      ],
+      "traded": {
+        "id": "FWD_5",
+        "side": "buy",
+        "qty": 10,
+        "price": 414.79,
+        "fairAtTrade": 422.3,
+        "instantPnl": 75.056
+      },
+      "pnlAfter": 396.097
+    },
+    {
+      "tick": 31,
+      "q": 403,
+      "injected": [
+        {
+          "id": "FWD_5",
+          "fair": 427.08,
+          "bid": 415.83,
+          "ask": 417.33,
+          "mis": -10.5
+        }
+      ],
+      "traded": {
+        "id": "FWD_5",
+        "side": "buy",
+        "qty": 10,
+        "price": 417.33,
+        "fairAtTrade": 427.08,
+        "instantPnl": 97.492
+      },
+      "pnlAfter": 669.089
+    },
+    {
+      "tick": 32,
+      "q": 406,
+      "injected": [
+        {
+          "id": "FWD_5",
+          "fair": 422.57,
+          "bid": 431.6,
+          "ask": 433.1,
+          "mis": 9.78
+        }
+      ],
+      "traded": {
+        "id": "FWD_5",
+        "side": "sell",
+        "qty": 10,
+        "price": 431.6,
+        "fairAtTrade": 422.57,
+        "instantPnl": -90.307
+      },
+      "pnlAfter": 681.562
+    },
+    {
+      "tick": 36,
+      "q": 528,
+      "injected": [
+        {
+          "id": "FWD_5",
+          "fair": 488.13,
+          "bid": 493.71,
+          "ask": 495.21,
+          "mis": 6.33
+        }
+      ],
+      "traded": {
+        "id": "FWD_5",
+        "side": "sell",
+        "qty": 10,
+        "price": 493.71,
+        "fairAtTrade": 488.13,
+        "instantPnl": -55.751
+      },
+      "pnlAfter": 1764.064
+    },
+    {
+      "tick": 38,
+      "q": 496,
+      "injected": [
+        {
+          "id": "CALL_10_365",
+          "fair": 98.45,
+          "bid": 86.65,
+          "ask": 88.15,
+          "mis": -11.05
+        }
+      ],
+      "traded": {
+        "id": "CALL_10_365",
+        "side": "buy",
+        "qty": 10,
+        "price": 88.15,
+        "fairAtTrade": 98.45,
+        "instantPnl": 102.964
+      },
+      "pnlAfter": 1700.277
+    },
+    {
+      "tick": 45,
+      "q": 525,
+      "injected": [
+        {
+          "id": "MONO_CALL_380",
+          "fair": 145,
+          "bid": 155.09,
+          "ask": 156.59,
+          "mis": 10.84
+        }
+      ],
+      "traded": {
+        "id": "MONO_CALL_380",
+        "side": "sell",
+        "qty": 10,
+        "price": 155.09,
+        "fairAtTrade": 145,
+        "instantPnl": -100.874
+      },
+      "pnlAfter": 1934.818
+    }
+  ],
+  "rating": {
+    "rows": [
+      {
+        "n": 1,
+        "score": 42,
+        "ewma": 42,
+        "elo": 1200
+      },
+      {
+        "n": 2,
+        "score": 61,
+        "ewma": 46.75,
+        "elo": 1204
+      },
+      {
+        "n": 3,
+        "score": 55,
+        "ewma": 48.81,
+        "elo": 1205
+      },
+      {
+        "n": 4,
+        "score": 78,
+        "ewma": 56.11,
+        "elo": 1214
+      },
+      {
+        "n": 5,
+        "score": 66,
+        "ewma": 58.58,
+        "elo": 1219
+      },
+      {
+        "n": 6,
+        "score": 80,
+        "ewma": 63.94,
+        "elo": 1229
+      },
+      {
+        "n": 7,
+        "score": 71,
+        "ewma": 65.7,
+        "elo": 1236
+      },
+      {
+        "n": 8,
+        "score": 85,
+        "ewma": 70.53,
+        "elo": 1247
+      }
+    ],
+    "note": "alpha=0.25, K=32, S=score/100"
+  },
+  "marketIllustration": {
+    "vars": [
+      {
+        "name": "x",
+        "value": 16,
+        "min": 5,
+        "max": 25,
+        "mean": 15
+      },
+      {
+        "name": "y",
+        "value": 12,
+        "min": 5,
+        "max": 25,
+        "mean": 15
+      },
+      {
+        "name": "z",
+        "value": 14,
+        "min": 5,
+        "max": 25,
+        "mean": 15
+      },
+      {
+        "name": "w",
+        "value": 13,
+        "min": 5,
+        "max": 25,
+        "mean": 15
+      }
+    ],
+    "q": 374,
+    "instruments": [
+      {
+        "id": "SPOT",
+        "type": "spot",
+        "fair": 374
+      },
+      {
+        "id": "FWD_5",
+        "type": "forward",
+        "fair": 406.46,
+        "horizon": 5
+      },
+      {
+        "id": "CALL_10_410",
+        "type": "call",
+        "fair": 29.77,
+        "strike": 410,
+        "horizon": 10
+      },
+      {
+        "id": "BIN_10_346",
+        "type": "binary",
+        "fair": 0.93,
+        "strike": 346,
+        "horizon": 10
+      },
+      {
+        "id": "MONO_CALL_355",
+        "type": "monoCall",
+        "fair": 72.755,
+        "strike": 355,
+        "horizon": 10
+      }
+    ]
+  },
+  "epsByDifficulty": [
+    {
+      "difficulty": "easy",
+      "baseEps": 12,
+      "epsRange": [
+        9.600000000000001,
+        18
+      ]
+    },
+    {
+      "difficulty": "medium",
+      "baseEps": 7.5,
+      "epsRange": [
+        6,
+        11.25
+      ]
+    },
+    {
+      "difficulty": "hard",
+      "baseEps": 4.5,
+      "epsRange": [
+        3.6000000000000005,
+        6.75
+      ]
+    },
+    {
+      "difficulty": "expert",
+      "baseEps": 3,
+      "epsRange": [
+        2.4000000000000004,
+        4.5
+      ]
+    }
+  ],
+  "tradeExample": {
+    "fair": 100,
+    "mis": -3,
+    "spread": 1.5,
+    "ask": 97.75,
+    "qty": 10,
+    "pnlInstant": 22.5,
+    "decayedValueAt2Ticks": 5.625
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "start": [
+    16,
+    12,
+    14,
+    13
+  ],
+  "q0": 374,
+  "instruments": [
+    {
+      "id": "SPOT",
+      "type": "spot",
+      "engineFair": 374
+    },
+    {
+      "id": "FWD_5",
+      "type": "forward",
+      "h": 5,
+      "engineFair": 406.46
+    },
+    {
+      "id": "CALL_10_410",
+      "type": "call",
+      "K": 410,
+      "h": 10,
+      "engineFair": 29.77
+    },
+    {
+      "id": "BIN_10_346",
+      "type": "binary",
+      "K": 346,
+      "h": 10,
+      "engineFair": 0.93
+    },
+    {
+      "id": "MONO_CALL_355",
+      "type": "monoCall",
+      "K": 355,
+      "h": 10,
+      "engineFair": 72.755
+    }
+  ],
+  "exact": {
+    "fwd5": {
+      "T": 398.752,
+      "E": 405.356,
+      "sdT": 54.432,
+      "sdE": 51.933
+    },
+    "call10": {
+      "T": 29.394,
+      "E": 31.805
+    },
+    "bin10": {
+      "T": 0.85793,
+      "E": 0.90887
+    }
+  }
+}
