@@ -1,16 +1,37 @@
-import { useEffect, useState } from 'react'
-import { initMarket, applyMarket, resultMarket, getClassicPreset, MarketSettings, MarketState } from './engine'
+import { useEffect, useState, useRef } from 'react'
+import { initMarket, applyMarket, resultMarket, getClassicPreset } from './engine'
+import type { MarketSettings, MarketState } from './engine'
 import { navigate } from '../../app/router'
 import { useAppStore } from '../../app/store'
 
 const defaultSettings: MarketSettings = getClassicPreset(Math.floor(Math.random()*1e9))
 
-export function MarketSimPage({ params }: { params: Record<string,string> }) {
+export function MarketSimPage(_props: { params: Record<string,string> }) {
   const [settings, setSettings] = useState<MarketSettings>(defaultSettings)
   const [state, setState] = useState<MarketState | null>(null)
   const [showSettings, setShowSettings] = useState(true)
   const [qty, setQty] = useState(5)
   const addSession = useAppStore(s=>s.addSession)
+  const recordedRef = useRef<string | null>(null)
+
+  // persist the session to history/ratings exactly once when the clock runs out
+  useEffect(()=>{
+    if (!state || !state.over) return
+    const key = `${state.seed}-${state.startMs}`
+    if (recordedRef.current === key) return
+    recordedRef.current = key
+    const res = resultMarket(state)
+    addSession({
+      id: `${Date.now()}-${state.seed}`,
+      gameId: 'market-sim',
+      seed: state.seed,
+      settings: state.settings,
+      score: res.score,
+      breakdown: res,
+      ts: Date.now(),
+      durationMs: state.settings.durationSec*1000
+    })
+  }, [state?.over, state?.seed, state?.startMs])
 
   useEffect(()=>{
     if (!state || state.over) return

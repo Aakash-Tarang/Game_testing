@@ -1,5 +1,5 @@
-import { createRNG, RNG } from '../../core/rng'
-import { customTable, uniformDiscrete, binomial, geometric, normalDiscretized } from '../../core/distributions'
+import { createRNG } from '../../core/rng'
+import type { RNG } from '../../core/rng'
 import { toleranceScore, timeBonus } from '../../core/scoring'
 
 export type Difficulty = 'easy'|'medium'|'hard'|'expert'
@@ -52,7 +52,6 @@ function randInt(rng: RNG, a: number, b: number) { return rng.nextInt(a, b+1) } 
 function genLottery(rng: RNG, difficulty: Difficulty): EVScenario {
   const n = difficulty === 'easy' ? randInt(rng, 3,4) : difficulty === 'medium' ? randInt(rng, 3,5) : randInt(rng, 4,6)
   const outcomes: number[] = []
-  const probs: number[] = []
   // generate probs that sum to 1 with nice fractions maybe
   // generate random weights then normalize
   let weights: number[] = []
@@ -133,7 +132,7 @@ function genConditional(rng: RNG, difficulty: Difficulty): EVScenario {
   }
 }
 
-function genCompound(rng: RNG, difficulty: Difficulty): EVScenario {
+function genCompound(rng: RNG, _difficulty: Difficulty): EVScenario {
   // Two-step: first lottery chooses which second lottery
   // e.g., 50% -> lottery A EV=..., 50% -> lottery B
   const evA = randInt(rng, -20, 80)

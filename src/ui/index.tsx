@@ -36,15 +36,12 @@ export function ScoreBoard({ score, breakdown }: { score: number, breakdown?: an
 
 export function useCountdown(durationMs: number, running: boolean, onExpire?: ()=>void) {
   const [remaining, setRemaining] = useState(durationMs)
-  const [startTs, setStartTs] = useState<number|null>(null)
 
   useEffect(()=>{
     if (!running) return
-    setStartTs(performance.now())
     setRemaining(durationMs)
     const iv = setInterval(()=>{
-      const elapsed = performance.now() - (startTs ?? performance.now())
-      // recalc from Date.now? simpler use state
+      // countdown is driven off the previous state value rather than wall clock
       setRemaining(prev => {
         const next = prev - 100
         if (next <= 0) {

@@ -1,4 +1,4 @@
-import { RNG } from './rng'
+import type { RNG } from './rng'
 
 export interface Distribution<T = number> {
   mean(): number
@@ -166,7 +166,7 @@ export function customTable(values: number[], probs: number[]): Distribution {
       const idx = values.indexOf(x)
       return idx >= 0 ? norm[idx] : 0
     },
-    cdf: (x) => values.filter((v, i) => v <= x).reduce((s, _, i) => s + norm[values.indexOf(values.filter(v => v <= x)[i])], 0),
+    cdf: (x) => values.filter((v) => v <= x).reduce((s, _, i) => s + norm[values.indexOf(values.filter(v => v <= x)[i])], 0),
     support: () => values,
     expectedValue: (f) => values.reduce((s, v, i) => s + f(v) * norm[i], 0),
   }

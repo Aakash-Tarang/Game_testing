@@ -1,4 +1,25 @@
-# React + TypeScript + Vite
+# QUANT_SIM — quant-interview training platform
+
+A local, seeded, deterministic suite of quant-interview training games (EV Drill + Market
+Simulator), built with Vite + React + TypeScript.
+
+## Documentation
+
+**Read [`docs/book.html`](docs/book.html)** — *QUANT_SIM: The Book* — the complete
+from-first-principles record of this project: all the probability theory, every formula in the
+code with its derivation, the phase-by-phase build narrative, verification experiments with
+reproducible numbers, and an honest audit of known bugs. (Plain markdown version:
+[`docs/REPORT.md`](docs/REPORT.md); experiment harness: `docs/book/experiments/`.)
+
+## Quick start
+
+```bash
+npm install
+npm run dev     # hub at :5173
+npm test        # 6-test determinism / verification suite
+```
+
+---
 
 This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
 

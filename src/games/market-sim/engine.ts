@@ -1,4 +1,5 @@
-import { createRNG, RNG } from '../../core/rng'
+import { createRNG } from '../../core/rng'
+import type { RNG } from '../../core/rng'
 
 export type Difficulty = 'easy'|'medium'|'hard'|'expert'
 export type FormulaType = 'classic' | 'weighted' | 'product' | 'runningMax'
@@ -110,7 +111,7 @@ function createVars(rng: RNG, formula: FormulaType): VarState[] {
   })
 }
 
-function computeQ(vars: VarState[], formula: FormulaType, settings: MarketSettings, rng?: RNG): number {
+function computeQ(vars: VarState[], formula: FormulaType, _settings: MarketSettings, _rng?: RNG): number {
   const [x,y,z,w] = vars.map(v=>v.value)
   switch(formula) {
     case 'classic':
@@ -267,7 +268,6 @@ export function initMarket(seed: number, settings: MarketSettings): MarketState 
   }
 
   // initial fair calc via monte carlo for non-spot
-  const stateForEst = { vars, formula: settings.formula }
   // use separate rng for estimation to keep deterministic
   const estRng = createRNG(seed+9999)
   for (const inst of instruments) {
